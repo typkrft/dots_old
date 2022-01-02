@@ -32,6 +32,7 @@
     ~/.config/yabai: yabai
     # TODO: Use Shell Commands to setup Watched Directories and Triggers
     ~/.config/watchman: watchman
+    ~/.config/zellij: zellij
     ~/.config/wal: wal
     ~/.config/task/taskrc: task/taskrc
     ~/.config/starship: starship

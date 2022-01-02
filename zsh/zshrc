@@ -18,6 +18,9 @@ path=("$HOME/.asdf/installs/rust/1.57.0/bin" $path)
 # export to sub-processes (make it inherited by child processes)
 export PATH
 
+# Zellij Envs
+ZELLIJ_CONFIG_DIR=/.config/zellij
+
 # A S D F
 ## Init ASDF
 ### NOTE: This has to be initialized before any ruby configurations. 
