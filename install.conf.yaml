@@ -1,0 +1,77 @@
+# TODO: install brew packages
+# TODO: Install Pip, Go, Rust, Node, etc Packages
+# TODO: Setup git user.name and user.email if not set
+# TODO: Install Homebrew
+# TODO: Look for Git Repo Download Manager, Create Code/Git Folder
+# TODO: Add Firefox Profile
+# TODO: Setup asdf
+# TODO: Follow neccessary instructions for installed brew packages
+# TODO: Create Install Script that sets Env Variables then check env variables to link specific files
+# TODO: Setup macos file to run once Maybe set an EVN variable in zshrc
+# TODO: Download and install https://ftp.epson.com/drivers/ES400_Lite_64NR_AM.dmg for the scanner
+# TODO: Download Kitty Repo so it can be liked to head in kitty.conf 
+# TODO: Setup and Add Start Page (Awesome Startpage Rrpo)
+# TODO: Install packages first before linking 
+# TODO: Run nvchad install after neovim install before linking
+
+- defaults:
+    link:
+        relink: true
+        create: true
+
+- clean: ['~']
+
+# TODO: Try linking the files not the folders so it doesn't mess up colorls
+- link:
+    ~/.zshrc: zsh/zshrc
+    ~/.config/bat: bat
+    ~/.config/homebrew: homebrew
+    ~/.config/navi: navi
+    ~/.config/bin: bin
+    ~/.config/colorls: colorls
+    ~/.config/yabai: yabai
+    # TODO: Use Shell Commands to setup Watched Directories and Triggers
+    ~/.config/watchman: watchman
+    ~/.config/wal: wal
+    ~/.config/task/taskrc: task/taskrc
+    ~/.config/starship: starship
+    ~/.config/ranger/colorschemes/dracula.py: ranger/colorschemes/dracula.py
+    ~/.config/ranger/rifle.conf: ranger/rifle.conf
+    ~/.config/ranger/rc.conf: ranger/rc.conf
+    ~/.config/ranger/scope.sh: ranger/scope.sh
+    ~/.config/bpytop: bpytop
+    ~/.config/skhd: skhd
+    ~/.config/pandoc: pandoc
+    ~/.config/sketchybar: sketchybar
+    ~/.config/kitty: kitty
+    ~/.config/nvim/lua/custom: nv_chad
+    ~/.Xresources: xresources/Xresources
+    # TODO: Install VSCode plugins 
+    ~/Library/Application Support/Code/User/settings.json: vscode/settings.json  
+    ~/.hushlogin: zsh/hushlogin
+    ~/.config/macos: macos
+    ~/.config/wallpapers: wallpapers
+    ~/Library/Application Support/iTerm2/DynamicProfiles/Profiles.json: iterm/Profiles.json 
+    ~/.config/iTerm2/Dracula.itermcolors: iterm/Dracula.itermcolors
+    ~/.hammerspoon: hammerspoon
+
+- shell:
+    - [git submodule update --init --recursive, Installing submodules]
+    - [bat cache --build]
+    # TODO: Setup If Needed - Maybe add script in `helper`
+    # - [cupsctl PreserveJobHistory=Yes]
+    # - [cupsctl PreserveJobFiles=8640000]
+    # - [cupsctl WebInterface=yes]
+    # - [bash -c $HOME/.config/macos/defaults]
+    # - [open $HOME/.config/iTerm2/Dracula.itermcolors]
+    # - [brew bundle --file ~/.config/homebrew/brewfile]
+    # NOTE: Setup asdf ruby
+    # - [asdf plugin-add ruby]
+    # - [asdf install ruby 3.0.3]
+    # - [asdf global ruby 3.0.3]
+    # NOTE: Install Ruby Packages
+    # - [gem install colorls]
+    # - [asdf reshim ruby]
+    # NOTE: NV Chad may need to be added last
+    # - [git clone https://github.com/NvChad/NvChad ~/.config/nvim]
+    # - [nvim +'hi NormalFloat guibg=#1e222a' +PackerSync]

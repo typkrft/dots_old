@@ -1,0 +1,54 @@
+{
+    "workbench.iconTheme": "bearded-icons",
+    "workbench.colorTheme": "Dracula",
+    "customizeUI.titleBar": "frameless",
+    "window.titleBarStyle": "native",
+    "workbench.sideBar.location": "right",
+    "workbench.colorCustomizations": {
+        "editorIndentGuide.activeBackground": "#50fa7b",
+        "editorIndentGuide.background": "#44475a"
+         },     
+    "editor.codeLensFontFamily": "VictorMono Nerd Font",
+    "editor.fontFamily": "VictorMono Nerd Font, Menlo, Monaco, 'Courier New', monospace",
+    "editor.fontLigatures": true,
+    "editor.fontSize": 16,
+    "editor.inlayHints.fontFamily": "VictorMono Nerd Font",
+    "debug.console.fontFamily": "VictorMono Nerd Font",
+    "debug.console.fontSize": 16,
+    "markdown.preview.fontSize": 16,
+    "terminal.integrated.fontFamily": "VictorMono Nerd Font",
+    "terminal.integrated.fontSize": 16,
+    "customizeUI.font.regular": "VictorMono Nerd Font",
+    "customizeUI.font.monospace": "VictorMono Nerd Font Mono",
+    "editor.bracketPairColorization.enabled": true,
+    "todohighlight.keywords": [
+        {
+            "text": "TODO:",
+            // "color": "#bd93f9",
+            // "border": "1px solid red",
+            // "borderRadius": "2px", //NOTE: using borderRadius along with `border` or you will see nothing change
+            "backgroundColor": "#bd93f9",
+            //other styling properties goes here ... 
+        },
+        {
+            "text": "FIXME:",
+            // "color": "#bd93f9",
+            // "border": "1px solid red",
+            // "borderRadius": "2px", //NOTE: using borderRadius along with `border` or you will see nothing change
+            "backgroundColor": "#ff5555",
+            //other styling properties goes here ... 
+        },
+        {
+            "text": "NOTE:",
+            "color": "#000",
+            // "border": "1px solid red",
+            // "borderRadius": "2px", //NOTE: using borderRadius along with `border` or you will see nothing change
+            "backgroundColor": "#ffb86c",
+            //other styling properties goes here ... 
+        }
+    ],
+    "breadcrumbs.enabled": false,
+    "workbench.activityBar.visible": false,
+    "telemetry.telemetryLevel": "off",
+    "dashboard.projectData": null
+}

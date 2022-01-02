@@ -1,0 +1,87 @@
+# For more documentation, see https://taskwarrior.org or try 'man task', 'man task-color',
+# 'man task-sync' or 'man taskrc'
+
+# Here is an example of entries that use the default, override and blank values
+#   variable=foo   -- By specifying a value, this overrides the default
+#   variable=      -- By specifying no value, this means no default
+#   #variable=foo  -- By commenting out the line, or deleting it, this uses the default
+
+# Use the command 'task show' to see all defaults and overrides
+
+# Files
+data.location=~/.local/share/task
+hooks.location=~/.config/task/hooks
+
+# T H E M E
+# Color theme (uncomment one to use)
+include no-color.theme
+
+# General decoration
+  color.label=blue
+  color.label.sort=green
+  color.alternate=color15 on color8
+  color.header=
+  color.footnote=
+  color.warning=
+  color.error=
+  color.debug=
+
+# Task state
+  color.completed=green
+  color.deleted=
+  color.active=
+  color.recurring=
+  color.scheduled=
+  color.until=
+  color.blocked=
+  color.blocking=
+
+# Project
+  # color.project.Network=on color12
+
+# Priority
+  color.uda.priority.H=black on green
+  color.uda.priority.M=black on magenta
+  color.uda.priority.L=black on cyan
+
+# Tags
+  color.tag.next=color0 on color12
+  color.tag.none=
+  color.tagged=color0 on color10
+
+# Due
+  color.due=color0 on color14
+  color.due.today=
+  color.overdue=
+
+# Report: burndown
+  color.burndown.done=
+  color.burndown.pending=
+  color.burndown.started=
+
+# Report: history
+  color.history.add=
+  color.history.delete=
+  color.history.done=
+
+# Report: summary
+  color.summary.background=
+  color.summary.bar=
+
+# Command: calendar
+  color.calendar.due=black on green
+  color.calendar.due.today=black on blue
+  color.calendar.holiday=black on yellow
+  color.calendar.overdue=black on red
+  color.calendar.today=black on cyan
+  color.calendar.weekend=black on white
+  color.calendar.weeknumber=color13
+
+# Command: sync
+  color.sync.added=
+  color.sync.changed=
+  color.sync.rejected=
+
+# Command: undo
+  color.undo.after=
+  color.undo.before=
