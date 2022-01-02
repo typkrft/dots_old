@@ -1,0 +1,9 @@
+# Notes
+I had to tag feline for nvim and remove cmd enter from telescope in ~/.config/nvim/lua/plugins/init.lua
+Had to change where asdf sources from
+
+Try best to install linuxbrew first next time and install all deps from there where posible
+
+cgroups systemd.unified_cgroup_hierarchy=false change boot params
+or /etc/nvidia-container-runtime/config.toml cgroups = true 
+this issue may only be ubuntu 20.10 server
