@@ -4,13 +4,32 @@
 
 # Features
 
+# Issues
+- Likely something in my nv_chad/custom is breaking to resolve comment out lazy load command in ~/.config/nvim/lua/plugins/init.lua 
+- Add `tag = 'v0.3.3'` to feline plugin in ~/.config/nvim/lua/plugins/init.lua
+- Install Devicons after ranger `git clone https://github.com/alexanderjeurissen/ranger_devicons ~/.config/ranger/plugins/ranger_devicons`
+
+# Docker 
+[Nvidia](https://github.com/docker/compose/issues/6691)
+[Ubuntu Nvidia](https://github.com/ubuntu/microk8s/issues/2662)
+[Debian Nvidia](https://github.com/NVIDIA/nvidia-docker/issues/1447)
+[SO maybe not helpful](https://askubuntu.com/questions/1294762/cant-run-nvidia-docker)
+[NVIDIA](https://github.com/NVIDIA/nvidia-docker/issues/1225)
+
+## How to install 
+
+```
+curl -s -L https://nvidia.github.io/nvidia-docker/gpgkey | \
+  sudo apt-key add -
+distribution=$(. /etc/os-release;echo ${ID}20.10)
+curl -s -L https://nvidia.github.io/nvidia-docker/$distribution/nvidia-docker.list | \
+  sudo tee /etc/apt/sources.list.d/nvidia-docker.list
+sudo apt-get update
+```
+
 # TODOs
-## [bin/helper](bin/helper)
-- [ ] ( __Line: 199__) - Add flag to set all spaces to same wallpaper
-- [ ] ( __Line: 200__) - Set the name of the terminal and center and float it in yabai rules
-- [ ] ( __Line: 201__) - Bind key to set color scheme
-- [ ] ( __Line: 202__) - Bind key to show desktop
-- [ ] ( __Line: 251__) - This could be improved with imagemagick and hammerspoon 
+## [nv_chad/init.lua](nv_chad/init.lua)
+- [ ] ( __Line: 36__) - Add Events to plugs to lazy load
 
 ## [install.conf.yaml](install.conf.yaml)
 - [ ] ( __Line: 1__) - Install Pip, Go, Rust, Node, etc Packages
@@ -36,6 +55,24 @@
 - [ ] ( __Line: 50__) - Install VSCode plugins 
 - [ ] ( __Line: 57__) - Setup If Needed - Maybe add script in `helper`
 
+## [nv_chad/highlights.lua](nv_chad/highlights.lua)
+- [ ] ( __Line: 10__) - Should add a check for Dracula before setting these 
+
+## [starship/starship.toml](starship/starship.toml)
+- [ ] ( __Line: 1__) - Add Time that Displays after 2200
+- [ ] ( __Line: 2__) - Add Music if playing
+- [ ] ( __Line: 3__) - See if I can make the prompt a color script gradient changes on error
+
+## [i3/config](i3/config)
+- [ ] ( __Line: 1__) - Add Rofi
+
+## [bin/helper](bin/helper)
+- [ ] ( __Line: 199__) - Add flag to set all spaces to same wallpaper
+- [ ] ( __Line: 200__) - Set the name of the terminal and center and float it in yabai rules
+- [ ] ( __Line: 201__) - Bind key to set color scheme
+- [ ] ( __Line: 202__) - Bind key to show desktop
+- [ ] ( __Line: 251__) - This could be improved with imagemagick and hammerspoon 
+
 ## [kitty/kitty.conf](kitty/kitty.conf)
 - [ ] ( __Line: 1__) - Syntax Highlighting for .conf not using proper italics 
 - [ ] ( __Line: 10__) - Download VictorMono and Patch it myself to see if sylistic options work
@@ -43,18 +80,9 @@
 - [ ] ( __Line: 26__) - Maybe this can be set to xterm-kitty and changed when needed for ssh etc
 - [ ] ( __Line: 34__) - Setup Keyboard Shortcuts and Bindings
 
-## [nv_chad/init.lua](nv_chad/init.lua)
-- [ ] ( __Line: 36__) - Add Events to plugs to lazy load
-
 ## [notes/arch.md](notes/arch.md)
 - [ ] ( __Line: 1__) - Add to install.conf.yaml 
 - [ ] ( __Line: 10__) - Move Notes to GoldenAxe.local share
-
-## [nv_chad/highlights.lua](nv_chad/highlights.lua)
-- [ ] ( __Line: 10__) - Should add a check for Dracula before setting these 
-
-## [i3/config](i3/config)
-- [ ] ( __Line: 1__) - Add Rofi
 
 ## [zsh/zshrc](zsh/zshrc)
 - [ ] ( __Line: 1__) - Use bat for fzf
@@ -65,8 +93,3 @@
 - [ ] ( __Line: 6__) - Make All Aliases check for programs if not installed by default
 - [ ] ( __Line: 7__) - Create Fast Syntax Highlighting theme for Dracula
 - [ ] ( __Line: 8__) - If the buffers empty set left or right arrow to ctrl + r history search
-
-## [starship/starship.toml](starship/starship.toml)
-- [ ] ( __Line: 1__) - Add Time that Displays after 2200
-- [ ] ( __Line: 2__) - Add Music if playing
-- [ ] ( __Line: 3__) - See if I can make the prompt a color script gradient changes on error
