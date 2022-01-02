@@ -8,13 +8,27 @@
 - Likely something in my nv_chad/custom is breaking to resolve comment out lazy load command in ~/.config/nvim/lua/plugins/init.lua 
 - Add `tag = 'v0.3.3'` to feline plugin in ~/.config/nvim/lua/plugins/init.lua
 - Install Devicons after ranger `git clone https://github.com/alexanderjeurissen/ranger_devicons ~/.config/ranger/plugins/ranger_devicons`
+- Take some notes on how I've current got NFS shares setup RE: permissions in Truenas and compose, as well as the optiosn in the compose file Look into best practices
+- Take some notes on system files I've changed like etc/resolv.conf and sshd_config, the changes I made and why ( what problem I was having )
 
-# Docker 
+# Docker
+## GPU
 [Nvidia](https://github.com/docker/compose/issues/6691)
 [Ubuntu Nvidia](https://github.com/ubuntu/microk8s/issues/2662)
 [Debian Nvidia](https://github.com/NVIDIA/nvidia-docker/issues/1447)
 [SO maybe not helpful](https://askubuntu.com/questions/1294762/cant-run-nvidia-docker)
 [NVIDIA](https://github.com/NVIDIA/nvidia-docker/issues/1225)
+[Not sure if helpful](https://www.reddit.com/r/qnap/comments/k9yznh/guide_plex_hardware_transcode_with_docker_and_gpu/)
+
+## NFS
+[Example and info on options](https://stackoverflow.com/questions/45282608/how-to-directly-mount-nfs-share-volume-in-container-using-docker-compose-v3)
+[Another Example](https://blog.stefandroid.com/2021/03/03/mount-nfs-share-in-docker-compose.html)
+[Another Example](https://lefthandbrain.com/mounting-nfs-volumes-with-docker-compose/)
+[RE: Permssions](https://www.truenas.com/community/threads/nfs-mount-configuration-for-user-perms.70236/post-484765)
+[RE: Permissions](https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/4/html/security_guide/s2-server-nfs-noroot)
+
+# Networking
+[resolv.conf](https://askubuntu.com/questions/1257384/how-do-resolv-conf-and-linux-dns-work)
 
 ## How to install 
 
@@ -28,6 +42,14 @@ sudo apt-get update
 ```
 
 # TODOs
+## [starship/starship.toml](starship/starship.toml)
+- [ ] ( __Line: 1__) - Add Time that Displays after 2200
+- [ ] ( __Line: 2__) - Add Music if playing
+- [ ] ( __Line: 3__) - See if I can make the prompt a color script gradient changes on error
+
+## [nv_chad/highlights.lua](nv_chad/highlights.lua)
+- [ ] ( __Line: 10__) - Should add a check for Dracula before setting these 
+
 ## [nv_chad/init.lua](nv_chad/init.lua)
 - [ ] ( __Line: 36__) - Add Events to plugs to lazy load
 
@@ -54,14 +76,6 @@ sudo apt-get update
 - [ ] ( __Line: 37__) - Use Shell Commands to setup Watched Directories and Triggers
 - [ ] ( __Line: 50__) - Install VSCode plugins 
 - [ ] ( __Line: 57__) - Setup If Needed - Maybe add script in `helper`
-
-## [nv_chad/highlights.lua](nv_chad/highlights.lua)
-- [ ] ( __Line: 10__) - Should add a check for Dracula before setting these 
-
-## [starship/starship.toml](starship/starship.toml)
-- [ ] ( __Line: 1__) - Add Time that Displays after 2200
-- [ ] ( __Line: 2__) - Add Music if playing
-- [ ] ( __Line: 3__) - See if I can make the prompt a color script gradient changes on error
 
 ## [i3/config](i3/config)
 - [ ] ( __Line: 1__) - Add Rofi

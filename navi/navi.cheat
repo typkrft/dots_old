@@ -70,3 +70,13 @@ git pull origin; git checkout <branch> -- <path>
 
 $ branch: git pull origin; git branch -r
 
+% proxmox
+
+# Install Dark Color Scheme
+bash <(curl -s https://raw.githubusercontent.com/Weilbyte/PVEDiscordDark/master/PVEDiscordDark.sh ) Install
+
+# Get Container PID
+ps aux | grep "/usr/bin/kvm -id <VMID>"
+
+# Kill Container
+kill -9 <PID>
