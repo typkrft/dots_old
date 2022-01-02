@@ -20,12 +20,14 @@
     default < cmd - tab [
       "firefox" : skhd -k "ctrl - tab"
       "iterm2" : skhd -k "shift + cmd - 0x1E"
+      "kitty" : skhd -k "shift + ctrl - 0x7C"
     ]
 
   # Cycle Tabs <- 0x21 = [
     default < cmd + shift - tab [
       "firefox" : skhd -k "shift + ctrl - tab"
       "iterm2" : skhd -k "shift + cmd - 0x21"
+      "kitty" : skhd -k "shift + ctrl - 0x7B"
     ]
 
   # Open New Window in Stack
@@ -33,7 +35,21 @@
       "firefox" : . $HOME/.config/bin/helper && new_window "Firefox" "stack"
       "code" : . $HOME/.config/bin/helper && new_window "Code" "stack"
       "iterm2" : . $HOME/.config/bin/helper && new_window "iTerm2" "stack"
+      "kitty" : . $HOME/.config/bin/helper && new_window "kitty" "stack"
     ]
+
+  # Move Down in Stack
+  default < cmd - 0x21 : yabai -m window --focus stack.prev 
+  
+  # Move up in Stack
+  default < cmd - 0x1E : yabai -m window --focus stack.next
+
+  # Restart yabai
+  default < cmd + alt - backspace : brew services restart yabai
+
+  # Restart skhd
+  default < cmd + alt + shift - backspace : brew services restart skhd
+
   # Open Private Window Firefox
   # HACK: See Helper Firefox New Window Issue
     default < cmd + shift - p [
@@ -44,6 +60,7 @@
     default < cmd - return [
       "mail" ~
       "screen sharing" ~
+      "kitty" : . $HOME/.config/bin/helper && new_window "kitty" 
       * : . $HOME/.config/bin/helper && new_iterm 
     ]
 

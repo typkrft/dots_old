@@ -4,6 +4,9 @@
 
 # Features
 
+# issues
+install antibody asdf startship devicons from scripts if needed
+
 # TODOs
 ## [zsh/zshrc](zsh/zshrc)
 - [ ] ( __Line: 1__) - Use bat for fzf
@@ -18,8 +21,6 @@
 ## [hammerspoon/init.lua](hammerspoon/init.lua)
 - [ ] ( __Line: 37__) - Send Notification via native or in sketchybar...Consider making a Notification theme that hides everything displays the notification title on left message on right and disappears (not sure if this would be blocking)
 - [ ] ( __Line: 70__) - Window Borders
-- [ ] ( __Line: 137__) - Start Kitty with a Name and unmanage it 
-- [ ] ( __Line: 138__) - Change Keybinds and run from SKHD
 
 ## [kitty/kitty.conf](kitty/kitty.conf)
 - [ ] ( __Line: 1__) - Syntax Highlighting for .conf not using proper italics 
@@ -35,18 +36,6 @@
 ## [nv_chad/init.lua](nv_chad/init.lua)
 - [ ] ( __Line: 36__) - Add Events to plugs to lazy load
 
-## [bin/helper](bin/helper)
-- [ ] ( __Line: 205__) - Add flag to set all spaces to same wallpaper
-- [ ] ( __Line: 206__) - Set the name of the terminal and center and float it in yabai rules
-- [ ] ( __Line: 207__) - Bind key to set color scheme
-- [ ] ( __Line: 208__) - Bind key to show desktop
-- [ ] ( __Line: 257__) - This could be improved with imagemagick and hammerspoon 
-
-## [homebrew/brewfile](homebrew/brewfile)
-- [ ] ( __Line: 18__) - add kitty git repo to ~/Code/Git/kitty edit kitty.conf to reflect location
-- [ ] ( __Line: 28__) - Install Notated Packages Manually
-- [ ] ( __Line: 64__) - Need to sign into the appstore first See Gtihub
-
 ## [nv_chad/plugins/statusline.lua](nv_chad/plugins/statusline.lua)
 - [ ] ( __Line: 1__) - Potentially Breaking Change in Feline see https://giters.com/NvChad/NvChad/issues/665
 
@@ -54,6 +43,18 @@
 - [ ] ( __Line: 1__) - Add Time that Displays after 2200
 - [ ] ( __Line: 2__) - Add Music if playing
 - [ ] ( __Line: 3__) - See if I can make the prompt a color script gradient changes on error
+
+## [homebrew/brewfile](homebrew/brewfile)
+- [ ] ( __Line: 18__) - add kitty git repo to ~/Code/Git/kitty edit kitty.conf to reflect location
+- [ ] ( __Line: 28__) - Install Notated Packages Manually
+- [ ] ( __Line: 64__) - Need to sign into the appstore first See Gtihub
+
+## [bin/helper](bin/helper)
+- [ ] ( __Line: 205__) - Add flag to set all spaces to same wallpaper
+- [ ] ( __Line: 206__) - Set the name of the terminal and center and float it in yabai rules
+- [ ] ( __Line: 207__) - Bind key to set color scheme
+- [ ] ( __Line: 208__) - Bind key to show desktop
+- [ ] ( __Line: 257__) - This could be improved with imagemagick and hammerspoon 
 
 ## [macos/defaults](macos/defaults)
 - [ ] ( __Line: 2__) - Hide menu bar
