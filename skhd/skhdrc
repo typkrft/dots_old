@@ -56,6 +56,33 @@
       "firefox" : /Applications/Firefox.app/Contents/MacOS/firefox-bin --private-window
     ]
 
+  # Window Focus
+    default < ctrl + alt - right : yabai -m window --focus next || yabai -m window --focus first
+    default < ctrl + alt - left : yabai -m window --focus prev || yabai -m window --focus last
+
+  # Move Windows
+    default < meh - left : yabai -m window --swap prev || yabai -m window --swap last
+    default < meh - right : yabai -m window --swap next || yabai -m window --swap first
+
+  # Toggle Layout
+    default < ctrl + alt - space : . $HOME/.config/bin/helper && toggle_layout
+  
+  # Insert into stack
+    default < ctrl + alt - return : yabai -m window --insert stack; skhd -k "escape"
+
+  # Rotate
+    default < ctrl + alt - r : yabai -m space --rotate 90
+  
+  # Toggle Split
+    default < ctrl + alt - s : yabai -m window --toggle split
+
+  # Resize
+    default < ctrl + alt - up : yabai -m window --resize right:50:50 || yabai -m window --resize left:-50:-50 
+    default < ctrl + alt - down : yabai -m window --resize right:-50:-50 || yabai -m window --resize left:50:50 
+    default < meh - up : yabai -m window --resize top:50:50 || yabai -m window --resize bottom:-50:-50
+    default < meh - down : yabai -m window --resize top:-50:-50 || yabai -m window --resize bottom:50:50
+
+
   # CMD + Enter is New Terminal when not in Mail
     default < cmd - return [
       "mail" ~
@@ -74,8 +101,6 @@
     default < ctrl + alt - b : open -a Bitwarden.app
   # Open Authy
     default < ctrl + alt - a : open -a Authy\ Desktop.app
-
-
 
 # W I N D O W  M O D E
   # Balance 0x18 -> =

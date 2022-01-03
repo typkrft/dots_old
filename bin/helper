@@ -1,6 +1,6 @@
 #!usr/bin/env bash
 
-# set -ex
+set -ex
 
 toggle_layout ()
 {
@@ -171,8 +171,16 @@ new_window ()
       -e 'end tell'
   }
 
-  osascript -e "tell application '$APP_TO_OPEN' to launch"
+
+  RUNNING=$(osascript -e "tell application \"System Events\" to set Appli_Launch to exists (processes where name is \"$APP_TO_OPEN\")")
   
+  if ! [[ $RUNNING = true ]]; then
+    osascript -e "tell application \"$APP_TO_OPEN\" to launch"
+    exit 0
+  fi
+
+  osascript -e "tell application \"$APP_TO_OPEN\" to activate"
+
   if [[ $2 = "stack" ]]; then
     yabai -m window --insert stack
   fi
