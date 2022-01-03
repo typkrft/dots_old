@@ -8,6 +8,10 @@
 install antibody asdf startship devicons from scripts if needed
 
 # TODOs
+## [hammerspoon/init.lua](hammerspoon/init.lua)
+- [ ] ( __Line: 37__) - Send Notification via native or in sketchybar...Consider making a Notification theme that hides everything displays the notification title on left message on right and disappears (not sure if this would be blocking)
+- [ ] ( __Line: 70__) - Window Borders
+
 ## [kitty/kitty.conf](kitty/kitty.conf)
 - [ ] ( __Line: 1__) - Syntax Highlighting for .conf not using proper italics 
 - [ ] ( __Line: 10__) - Download VictorMono and Patch it myself to see if sylistic options work
@@ -26,35 +30,24 @@ install antibody asdf startship devicons from scripts if needed
 - [ ] ( __Line: 7__) - Create Fast Syntax Highlighting theme for Dracula
 - [ ] ( __Line: 8__) - If the buffers empty set left or right arrow to ctrl + r history search
 
-## [hammerspoon/init.lua](hammerspoon/init.lua)
-- [ ] ( __Line: 37__) - Send Notification via native or in sketchybar...Consider making a Notification theme that hides everything displays the notification title on left message on right and disappears (not sure if this would be blocking)
-- [ ] ( __Line: 70__) - Window Borders
+## [nv_chad/highlights.lua](nv_chad/highlights.lua)
+- [ ] ( __Line: 10__) - Should add a check for Dracula before setting these 
 
 ## [starship/starship.toml](starship/starship.toml)
 - [ ] ( __Line: 1__) - Add Time that Displays after 2200
 - [ ] ( __Line: 2__) - Add Music if playing
 - [ ] ( __Line: 3__) - See if I can make the prompt a color script gradient changes on error
 
+## [nv_chad/init.lua](nv_chad/init.lua)
+- [ ] ( __Line: 36__) - Add Events to plugs to lazy load
+
 ## [homebrew/brewfile](homebrew/brewfile)
 - [ ] ( __Line: 18__) - add kitty git repo to ~/Code/Git/kitty edit kitty.conf to reflect location
 - [ ] ( __Line: 28__) - Install Notated Packages Manually
 - [ ] ( __Line: 64__) - Need to sign into the appstore first See Gtihub
 
-## [nv_chad/init.lua](nv_chad/init.lua)
-- [ ] ( __Line: 36__) - Add Events to plugs to lazy load
-
-## [nv_chad/highlights.lua](nv_chad/highlights.lua)
-- [ ] ( __Line: 10__) - Should add a check for Dracula before setting these 
-
 ## [nv_chad/plugins/statusline.lua](nv_chad/plugins/statusline.lua)
 - [ ] ( __Line: 1__) - Potentially Breaking Change in Feline see https://giters.com/NvChad/NvChad/issues/665
-
-## [bin/helper](bin/helper)
-- [ ] ( __Line: 205__) - Add flag to set all spaces to same wallpaper
-- [ ] ( __Line: 206__) - Set the name of the terminal and center and float it in yabai rules
-- [ ] ( __Line: 207__) - Bind key to set color scheme
-- [ ] ( __Line: 208__) - Bind key to show desktop
-- [ ] ( __Line: 257__) - This could be improved with imagemagick and hammerspoon 
 
 ## [install.conf.yaml](install.conf.yaml)
 - [ ] ( __Line: 1__) - install brew packages
@@ -76,6 +69,13 @@ install antibody asdf startship devicons from scripts if needed
 - [ ] ( __Line: 33__) - Use Shell Commands to setup Watched Directories and Triggers
 - [ ] ( __Line: 50__) - Install VSCode plugins 
 - [ ] ( __Line: 62__) - Setup If Needed - Maybe add script in `helper`
+
+## [bin/helper](bin/helper)
+- [ ] ( __Line: 205__) - Add flag to set all spaces to same wallpaper
+- [ ] ( __Line: 206__) - Set the name of the terminal and center and float it in yabai rules
+- [ ] ( __Line: 207__) - Bind key to set color scheme
+- [ ] ( __Line: 208__) - Bind key to show desktop
+- [ ] ( __Line: 257__) - This could be improved with imagemagick and hammerspoon 
 
 ## [macos/defaults](macos/defaults)
 - [ ] ( __Line: 2__) - Hide menu bar

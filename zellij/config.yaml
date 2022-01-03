@@ -391,7 +391,7 @@ plugins:
 # Options:
 #   - true (default)
 #   - false
-mouse_mode: false
+mouse_mode: true
 
 themes:
   default:
@@ -400,9 +400,9 @@ themes:
     black: [40,42,54]
     gray: [98,114,164]
     red: [255,85,85]
-    blue: [80,250,123]
+    green: [80,250,123]
     yellow: [241,250,140]
-    green: [189,147,249]
+    blue: [189,147,249]
     magenta: [255,121,198]
     cyan: [139,233,253]
     white: [248,248,242]

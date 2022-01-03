@@ -60,8 +60,8 @@
     default < cmd - return [
       "mail" ~
       "screen sharing" ~
-      "kitty" : . $HOME/.config/bin/helper && new_window "kitty" 
-      * : . $HOME/.config/bin/helper && new_iterm 
+      * : . $HOME/.config/bin/helper && new_window "kitty" 
+      # * : . $HOME/.config/bin/helper&&  new_iterm 
     ]
 
   # Open New Firefox
@@ -74,6 +74,8 @@
     default < ctrl + alt - b : open -a Bitwarden.app
   # Open Authy
     default < ctrl + alt - a : open -a Authy\ Desktop.app
+
+
 
 # W I N D O W  M O D E
   # Balance 0x18 -> =

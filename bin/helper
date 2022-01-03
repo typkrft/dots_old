@@ -159,7 +159,7 @@ new_window ()
 {
   APP_TO_OPEN="$1"
   CURRENT_APP=$(yabai -m query --windows --window | jq -r '.app')
-
+  
   click_menu_bar ()
   {
     osascript -e 'tell application "System Events"' \
@@ -171,19 +171,19 @@ new_window ()
       -e 'end tell'
   }
 
-  if [[ $CURRENT_APP = $APP_TO_OPEN ]]; then
-    if [[ $2 = "stack" ]]; then
-      yabai -m window --insert stack
-    fi
+  osascript -e "tell application '$APP_TO_OPEN' to launch"
+  
+  if [[ $2 = "stack" ]]; then
+    yabai -m window --insert stack
+  fi
 
-    if [[ $APP_TO_OPEN = "Code" ]]; then
-      click_menu_bar 1
-    elif [[ $APP_TO_OPEN = "Firefox" ]]; then
-      # HACK: Yabai fails to allow firefox window to open running from command line works though
-      /Applications/Firefox.app/Contents/MacOS/firefox-bin --new-window
-    else
-      click_menu_bar 0
-    fi
+  if [[ $APP_TO_OPEN = "Code" ]]; then
+    click_menu_bar 1
+  elif [[ $APP_TO_OPEN = "Firefox" ]]; then
+    # HACK: Yabai fails to allow firefox window to open running from command line works though
+    /Applications/Firefox.app/Contents/MacOS/firefox-bin --new-window
+  else
+    click_menu_bar 0
   fi
 }
 
