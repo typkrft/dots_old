@@ -1,0 +1,18 @@
+#!/bin/bash
+
+GET_HDD_TEMPS () {
+  NUM_DRIVES=$(ls /dev | grep da | sed -e 's/.*p.*//g' | grep -c d)
+
+  echo $NUM_DRIVES Drives
+
+  for i in seq $(seq 0 $(($NUM_DRIVES-1)))
+  do
+    TEMP=$(sudo smartctl -a /dev/da$i | awk '/Temperature_Celsius/{print $0}' | awk '{print $10 "C
+"}')
+    echo -e $TEMP
+  done
+}
+
+declare -a OUTPUT
+OUTPUT=$(GET_HDD_TEMPS)
+echo $OUTPUT
