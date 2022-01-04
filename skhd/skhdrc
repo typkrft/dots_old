@@ -6,9 +6,9 @@
 # ] 
 
 # M O D E S
-  :: default : echo default && sketchybar -m --set modal_indicator icon="N" --bar color="0xFF000000"
-  :: window @ : echo window && sketchybar -m --set modal_indicator icon="W" --bar color="0xFFffb86c"
-  :: scripts @ : echo scripts && sketchybar -m --set modal_indicator icon="S" --bar color="0xFF50fa7b"
+  :: default : echo default && sketchybar -m --set modal_indicator icon="N" icon.color="0xFFbd93f9" --bar color="0xFF000000"
+  :: window @ : echo window && sketchybar -m --set modal_indicator icon="W" icon.color="0xFFf8f8f2" --bar color="0xFFffb86c"
+  :: scripts @ : echo scripts && sketchybar -m --set modal_indicator icon="S" icon.color="0xFFf8f8f2" --bar color="0xFF50fa7b"
 
 # Mode Shortcuts
   default, scripts < fn - escape ; window

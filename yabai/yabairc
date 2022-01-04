@@ -114,8 +114,15 @@
   # yabai -m config window_opacity_duration      0.0
 
   # S I G N A L S 
-  # HACK: Kitty borders are offset when creating new windows most of the time, it seems that change the dims of the window reapplies the borders correctly.
-    yabai -m signal --add event=window_created app="kitty" action="yabai -m window $YABAI_WINDOW_ID --resize bottom_right:0:0 ||  yabai -m window $YABAI_WINDOW_ID --resize top_left:0:0; yabai -m window --focus prev"
+    # Kitty 
+      # HACK: Kitty borders are offset when creating new windows most of the time, it seems that change the dims of the window reapplies the borders correctly.
+      yabai -m signal --add event=window_created app="kitty" action="yabai -m window $YABAI_WINDOW_ID --resize bottom_right:0:0 ||  yabai -m window $YABAI_WINDOW_ID --resize top_left:0:0; yabai -m window --focus prev"
+    
+    # Sketchybar
+      yabai -m signal --add event=window_created action="sketchybar -m --trigger yabai_window &> /dev/null"
+      yabai -m signal --add event=window_destroyed action="sketchybar -m --trigger yabai_window &> /dev/null"
+      yabai -m signal --add event=window_focused action="sketchybar -m --trigger yabai_window &> /dev/null"
+      yabai -m signal --add event=space_changed action="sketchybar -m --trigger yabai_window &> /dev/null"
 
-echo yabai loaded
+echo "Yabai Loaded..."
 
