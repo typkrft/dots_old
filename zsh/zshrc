@@ -166,6 +166,9 @@ export EDITOR="nvim"
 # Don't Add commands with a space at the beginning to the history filename
 setopt HIST_IGNORE_SPACE
 
+# Kitty Env to use latest updates
+KITTY_DEVELOP_FROM=~/Code/Git/kitty
+
 # M I S C 
 # FIXME: Not passing through Zellij to Kitty Tab
 # Sets the shells title to the current process for Kitty (and others)

@@ -175,6 +175,9 @@ new_window ()
   RUNNING=$(osascript -e "tell application \"System Events\" to set Appli_Launch to exists (processes where name is \"$APP_TO_OPEN\")")
   
   if ! [[ $RUNNING = true ]]; then
+    if [[ $APP_TO_OPEN = "kitty" ]]; then
+      open -a kitty --args -1 
+    fi
     osascript -e "tell application \"$APP_TO_OPEN\" to launch"
     exit 0
   fi
@@ -215,28 +218,16 @@ set_wallpaper () {
   # TODO: Bind key to set color scheme
   # TODO: Bind key to show desktop
   skhd -k 'escape'
-  yabai -m space --toggle show-desktop
-  TOTAL_SPACES=$(yabai -m query --spaces | jq '.[].id' | wc -l)
-  CURRENT_SPACE=$(yabai -m query --spaces --space | jq -r ."index")
-  SCRIPT="
-    [[ $CURRENT_SPACE -ne 1 ]] && yabai -m --space focus 1 || : 
-    /bin/ls $1 | 
-      fzf --multi $TOTAL_SPACES --reverse --height 100% --bind 'ctrl-w:execute-silent:(wallpaper set $1{})' \
-      --preview 'timg -g 80x40 --auto-crop $1{}' |
-    xargs -I {} sh -c 'wallpaper set $1{}; yabai -m space --focus next;'; yabai -m space --focus $CURRENT_SPACE;   yabai -m space --toggle show-desktop;exit;
-  "
-  osascript -e '
-    on run argv
-      tell application "iTerm"
-        activate
-        set newWindow to (create window with profile "Float")
-        tell current session of newWindow
-          write text "" & item 1 of argv
-        end tell
-      end tell
-    end run
-  ' $SCRIPT
 
+  RUNNING=$(osascript -e "tell application \"System Events\" to set Appli_Launch to exists (processes where name is \"kitty\")")
+  TOTAL_SPACES=$(yabai -m query --spaces | jq '.[].id' | wc -l | xargs)
+  CURRENT_SPACE=$(yabai -m query --spaces --space | jq -r ."index")
+  
+  if [[ $CURRENT_SPACE -ne 1 ]]; then yabai -m space focus 1; fi
+  
+  yabai -m space --toggle show-desktop
+  kitty -1 --title=Wallpaper  sh -c "\ls $1 | fzf --multi $TOTAL_SPACES --reverse --height 100% --bind 'ctrl-w:execute-silent:(wallpaper set $1{})' --preview 'timg -g 80x40 --auto-crop $1{}' | xargs -I {} sh -c 'wallpaper set $1{}; yabai -m space --focus next; yabai -m space --focus $CURRENT_SPACE; yabai -m space --toggle show-desktop'"
+ 
 }
 
 get_pixel_color () {

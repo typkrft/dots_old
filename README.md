@@ -8,15 +8,6 @@
 install antibody asdf startship devicons from scripts if needed
 
 # TODOs
-## [nv_chad/highlights.lua](nv_chad/highlights.lua)
-- [ ] ( __Line: 10__) - Should add a check for Dracula before setting these 
-
-## [nv_chad/plugins/statusline.lua](nv_chad/plugins/statusline.lua)
-- [ ] ( __Line: 1__) - Potentially Breaking Change in Feline see https://giters.com/NvChad/NvChad/issues/665
-
-## [nv_chad/init.lua](nv_chad/init.lua)
-- [ ] ( __Line: 36__) - Add Events to plugs to lazy load
-
 ## [hammerspoon/init.lua](hammerspoon/init.lua)
 - [ ] ( __Line: 37__) - Send Notification via native or in sketchybar...Consider making a Notification theme that hides everything displays the notification title on left message on right and disappears (not sure if this would be blocking)
 - [ ] ( __Line: 70__) - Window Borders
@@ -25,9 +16,9 @@ install antibody asdf startship devicons from scripts if needed
 - [ ] ( __Line: 1__) - Setup Keyboard Shortcuts and Bindings 
 - [ ] ( __Line: 2__) - Setup Hammerspoon Quake Window
 - [ ] ( __Line: 3__) - Syntax Highlighting for .conf not using proper italics 
-- [ ] ( __Line: 12__) - Download VictorMono and Patch it myself to see if sylistic options work
-- [ ] ( __Line: 13__) - Create Symbol Map to use large VictorMono Icons and Mono as regular Font
-- [ ] ( __Line: 28__) - Maybe this can be set to xterm-kitty and changed when needed for ssh etc
+- [ ] ( __Line: 11__) - Download VictorMono and Patch it myself to see if sylistic options work
+- [ ] ( __Line: 12__) - Create Symbol Map to use large VictorMono Icons and Mono as regular Font
+- [ ] ( __Line: 27__) - Maybe this can be set to xterm-kitty and changed when needed for ssh etc
 
 ## [zsh/zshrc](zsh/zshrc)
 - [ ] ( __Line: 1__) - Use bat for fzf
@@ -39,17 +30,30 @@ install antibody asdf startship devicons from scripts if needed
 - [ ] ( __Line: 7__) - Create Fast Syntax Highlighting theme for Dracula
 - [ ] ( __Line: 8__) - If the buffers empty set left or right arrow to ctrl + r history search
 
+## [nv_chad/highlights.lua](nv_chad/highlights.lua)
+- [ ] ( __Line: 10__) - Should add a check for Dracula before setting these 
+
+## [nv_chad/init.lua](nv_chad/init.lua)
+- [ ] ( __Line: 36__) - Add Events to plugs to lazy load
+
 ## [starship/starship.toml](starship/starship.toml)
 - [ ] ( __Line: 1__) - Add Time that Displays after 2200
 - [ ] ( __Line: 2__) - Add Music if playing
 - [ ] ( __Line: 3__) - See if I can make the prompt a color script gradient changes on error
 
 ## [bin/helper](bin/helper)
-- [ ] ( __Line: 213__) - Add flag to set all spaces to same wallpaper
-- [ ] ( __Line: 214__) - Set the name of the terminal and center and float it in yabai rules
-- [ ] ( __Line: 215__) - Bind key to set color scheme
-- [ ] ( __Line: 216__) - Bind key to show desktop
-- [ ] ( __Line: 265__) - This could be improved with imagemagick and hammerspoon 
+- [ ] ( __Line: 216__) - Add flag to set all spaces to same wallpaper
+- [ ] ( __Line: 217__) - Set the name of the terminal and center and float it in yabai rules
+- [ ] ( __Line: 218__) - Bind key to set color scheme
+- [ ] ( __Line: 219__) - Bind key to show desktop
+- [ ] ( __Line: 256__) - This could be improved with imagemagick and hammerspoon 
+
+## [macos/defaults](macos/defaults)
+- [ ] ( __Line: 2__) - Hide menu bar
+- [ ] ( __Line: 3__) - Downloads Folder in Dock Display Stack/Grid
+
+## [nv_chad/plugins/statusline.lua](nv_chad/plugins/statusline.lua)
+- [ ] ( __Line: 1__) - Potentially Breaking Change in Feline see https://giters.com/NvChad/NvChad/issues/665
 
 ## [homebrew/brewfile](homebrew/brewfile)
 - [ ] ( __Line: 18__) - add kitty git repo to ~/Code/Git/kitty edit kitty.conf to reflect location
@@ -76,7 +80,3 @@ install antibody asdf startship devicons from scripts if needed
 - [ ] ( __Line: 33__) - Use Shell Commands to setup Watched Directories and Triggers
 - [ ] ( __Line: 50__) - Install VSCode plugins 
 - [ ] ( __Line: 62__) - Setup If Needed - Maybe add script in `helper`
-
-## [macos/defaults](macos/defaults)
-- [ ] ( __Line: 2__) - Hide menu bar
-- [ ] ( __Line: 3__) - Downloads Folder in Dock Display Stack/Grid

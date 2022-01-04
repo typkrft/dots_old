@@ -14,7 +14,7 @@
   yabai -m config window_placement             second_child
   yabai -m config window_topmost               on
   yabai -m config split_ratio                  0.50
-  yabai -m config auto_balance                 off
+  yabai -m config auto_balance                 on
 
 # W I N D O W S
   yabai -m config window_shadow                off
@@ -100,6 +100,8 @@
   # iTerm2
     yabai -m rule --add app="^iTerm" title="^Quake" manage=off
     yabai -m rule --add app="^iTerm" title="^Float" manage=off grid=2:1:1000:1000:1:1 sticky=on
+  # Kitty
+    yabai -m rule --add app="^kitty" title="^Wallpaper" manage=off grid=2:1:1000:1000:1:1 sticky=on border=off
   # Alfred Preferences
     yabai -m rule --add app="^Alfred Preferences$" manage=off
 
@@ -111,9 +113,9 @@
   yabai -m config insert_feedback_color        0xff50fa7b
   # yabai -m config window_opacity_duration      0.0
 
-echo yabai loaded
-
-# HACK:
   # S I G N A L S 
-  # yabai -m signal --add event=window_focused action="hs -A -c highlight_window\(\$YABAI_WINDOW_ID\)"
+  # HACK: Kitty borders are offset when creating new windows most of the time, it seems that change the dims of the window reapplies the borders correctly.
+    yabai -m signal --add event=window_created app="kitty" action="yabai -m window $YABAI_WINDOW_ID --resize bottom_right:0:0 ||  yabai -m window $YABAI_WINDOW_ID --resize top_left:0:0; yabai -m window --focus prev"
+
+echo yabai loaded
 
