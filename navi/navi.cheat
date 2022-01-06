@@ -70,3 +70,10 @@ git pull origin; git checkout <branch> -- <path>
 
 $ branch: git pull origin; git branch -r
 
+% gif
+
+# Convert Video to gif, Scale = 480, 720, 1080 etc
+ffmpeg -y -i <input_file> -filter_complex "fps=<frames_per_second>,scale=<scale>:-1:flags=lanczos,split[s0][s1];[s0]palettegen=max_colors=<colors>[p];[s1][p]paletteuse=dither=bayer" <output_file>.gif
+
+$ scale: echo -e "360\n 380\n 720\n 1080"
+$ colors: echo -e "32\n 256"

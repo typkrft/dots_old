@@ -19,11 +19,13 @@ vim.cmd("hi TodoSignFIX guibg=#282a36")
 vim.cmd("hi TodoSignHACK guibg=#282a36")
 vim.cmd("hi TodoSignPERF guibg=#282a36")
 vim.cmd("hi TodoSignWARN guibg=#282a36")
+vim.cmd("hi TodoSignIDEA guibg=#282a36")
 -- NOTE: Make Labeled Comments Really Stand out
 vim.cmd("hi TodoFgNOTE gui=bold,italic")
 vim.cmd("hi TodoFgTODO gui=bold,italic")
 vim.cmd("hi TodoFgFIX gui=bold,italic")
 vim.cmd("hi TodoFgHACK gui=bold,italic")
+vim.cmd("hi TodoFgIDEA gui=bold,italic")
 vim.cmd("hi TodoFgPERF gui=bold,italic")
 vim.cmd("hi TodoFgWARN gui=bold,italic")
 -- Telescope Border

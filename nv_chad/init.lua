@@ -40,9 +40,6 @@ hooks.add("install_plugins", function(use)
       requires = "nvim-lua/plenary.nvim",
       config = function()
         require("todo-comments").setup {
-          -- your configuration comes here
-          -- or leave it empty to use the default settings
-          -- refer to the configuration section below
             keywords = {
               FIX = {
                 icon = " ", -- icon used for the sign, and in search results
@@ -50,6 +47,7 @@ hooks.add("install_plugins", function(use)
                 alt = { "FIXME", "BUG", "FIXIT", "ISSUE" }, -- a set of other keywords that all map to this FIX keywords
                 -- signs = false, -- configure signs for some keywords individually
               },
+              IDEA = { icon = " ", color = "#ffb86c" },
               TODO = { icon = " ", color = "#bd93f9" },
               HACK = { icon = " ", color = "#ffb86c" },
               WARN = { icon = " ", color = "#ff5555", alt = { "WARNING", "XXX" } },

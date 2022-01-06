@@ -18,9 +18,18 @@ install antibody asdf startship devicons from scripts if needed
 - [ ] ( __Line: 7__) - Create Fast Syntax Highlighting theme for Dracula
 - [ ] ( __Line: 8__) - If the buffers empty set left or right arrow to ctrl + r history search
 
+## [kitty/kitty.conf](kitty/kitty.conf)
+- [ ] ( __Line: 1__) - Setup Keyboard Shortcuts and Bindings 
+- [ ] ( __Line: 2__) - Syntax Highlighting for .conf not using proper italics 
+- [ ] ( __Line: 9__) - Download VictorMono and Patch it myself to see if sylistic options work
+- [ ] ( __Line: 74__) - Maybe this can be set to xterm-kitty and changed when needed for ssh etc
+
 ## [hammerspoon/init.lua](hammerspoon/init.lua)
 - [ ] ( __Line: 37__) - Send Notification via native or in sketchybar...Consider making a Notification theme that hides everything displays the notification title on left message on right and disappears (not sure if this would be blocking)
 - [ ] ( __Line: 70__) - Window Borders
+
+## [nv_chad/init.lua](nv_chad/init.lua)
+- [ ] ( __Line: 36__) - Add Events to plugs to lazy load
 
 ## [homebrew/brewfile](homebrew/brewfile)
 - [ ] ( __Line: 18__) - add kitty git repo to ~/Code/Git/kitty edit kitty.conf to reflect location
@@ -30,38 +39,13 @@ install antibody asdf startship devicons from scripts if needed
 ## [nv_chad/highlights.lua](nv_chad/highlights.lua)
 - [ ] ( __Line: 10__) - Should add a check for Dracula before setting these 
 
-## [kitty/kitty.conf](kitty/kitty.conf)
-- [ ] ( __Line: 1__) - Setup Keyboard Shortcuts and Bindings 
-- [ ] ( __Line: 2__) - Setup Hammerspoon Quake Window
-- [ ] ( __Line: 3__) - Syntax Highlighting for .conf not using proper italics 
-- [ ] ( __Line: 11__) - Download VictorMono and Patch it myself to see if sylistic options work
-- [ ] ( __Line: 12__) - Create Symbol Map to use large VictorMono Icons and Mono as regular Font
-- [ ] ( __Line: 27__) - Maybe this can be set to xterm-kitty and changed when needed for ssh etc
-
-## [nv_chad/init.lua](nv_chad/init.lua)
-- [ ] ( __Line: 36__) - Add Events to plugs to lazy load
-
-## [nv_chad/plugins/statusline.lua](nv_chad/plugins/statusline.lua)
-- [ ] ( __Line: 1__) - Potentially Breaking Change in Feline see https://giters.com/NvChad/NvChad/issues/665
-
-## [bin/helper](bin/helper)
-- [ ] ( __Line: 216__) - Add flag to set all spaces to same wallpaper
-- [ ] ( __Line: 217__) - Set the name of the terminal and center and float it in yabai rules
-- [ ] ( __Line: 218__) - Bind key to set color scheme
-- [ ] ( __Line: 219__) - Bind key to show desktop
-- [ ] ( __Line: 256__) - This could be improved with imagemagick and hammerspoon 
-
 ## [starship/starship.toml](starship/starship.toml)
 - [ ] ( __Line: 1__) - Add Time that Displays after 2200
 - [ ] ( __Line: 2__) - Add Music if playing
 - [ ] ( __Line: 3__) - See if I can make the prompt a color script gradient changes on error
 
-## [macos/defaults](macos/defaults)
-- [ ] ( __Line: 2__) - Hide menu bar
-- [ ] ( __Line: 3__) - Downloads Folder in Dock Display Stack/Grid
-
-## [sketchybar/modal](sketchybar/modal)
-- [ ] ( __Line: 7__) - Create Script to toggle Modes 
+## [nv_chad/plugins/statusline.lua](nv_chad/plugins/statusline.lua)
+- [ ] ( __Line: 1__) - Potentially Breaking Change in Feline see https://giters.com/NvChad/NvChad/issues/665
 
 ## [install.conf.yaml](install.conf.yaml)
 - [ ] ( __Line: 1__) - install brew packages
@@ -83,3 +67,27 @@ install antibody asdf startship devicons from scripts if needed
 - [ ] ( __Line: 33__) - Use Shell Commands to setup Watched Directories and Triggers
 - [ ] ( __Line: 50__) - Install VSCode plugins 
 - [ ] ( __Line: 62__) - Setup If Needed - Maybe add script in `helper`
+
+## [bin/helper](bin/helper)
+- [ ] ( __Line: 216__) - Add flag to set all spaces to same wallpaper
+- [ ] ( __Line: 217__) - Set the name of the terminal and center and float it in yabai rules
+- [ ] ( __Line: 218__) - Bind key to set color scheme
+- [ ] ( __Line: 219__) - Bind key to show desktop
+- [ ] ( __Line: 256__) - This could be improved with imagemagick and hammerspoon 
+
+## [sketchybar/modal](sketchybar/modal)
+- [ ] ( __Line: 7__) - Create Script to toggle Modes 
+
+## [sketchybar/date_time](sketchybar/date_time)
+- [ ] ( __Line: 3__) - Just show Time; date on hover 
+
+## [sketchybar/stack_indicator](sketchybar/stack_indicator)
+- [ ] ( __Line: 3__) - Maybe change yabai active window border color when in a stack
+- [ ] ( __Line: 4__) - Add Stack Icon
+
+## [macos/defaults](macos/defaults)
+- [ ] ( __Line: 2__) - Hide menu bar
+- [ ] ( __Line: 3__) - Downloads Folder in Dock Display Stack/Grid
+
+## [sketchybar/battery](sketchybar/battery)
+- [ ] ( __Line: 3__) - Only show battery icon, show percentage on hover. 

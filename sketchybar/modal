@@ -8,15 +8,15 @@ source $HOME/.config/sketchybar/colors
 SCRIPT=" 
 "
 # C O N F 
-sketchybar -m --add item modal_indicator left \
---set modal_indicator                         \
-icon="N"                                      \
-icon.color="0xFF${PURPLE:1}"                  \
-icon.padding_left=12                          \
-icon.padding_right=15                         \
-background.color="0x96${CURRENT_LINE:1}"      \
-background.height=24                          \
-background.padding_left=-9                    \
-background.corner_radius=4                    \
-script="$SCRIPT"                              \
---subscribe modal_indicator mouse.clicked
+sketchybar -m --add item modal_indicator left                 \
+              --set modal_indicator                           \
+                icon="N"                                      \
+                icon.color="0xFF${PURPLE:1}"                  \
+                icon.padding_left=12                          \
+                icon.padding_right=15                         \
+                background.color="0x96${CURRENT_LINE:1}"      \
+                background.height=24                          \
+                background.padding_left=-9                    \
+                background.corner_radius=4                    \
+                script="$SCRIPT"                              \
+              --subscribe modal_indicator mouse.clicked

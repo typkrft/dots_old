@@ -23,14 +23,14 @@ sketchybar -m --set title label="$WINDOW_TITLE"
 sketchybar -m --add event yabai_window
 
 # W I N D O W  T I T L E 
-sketchybar -m --add item title left \
-              --subscribe title yabai_window \
-              --set title script="$SCRIPT" \
-                label.color="0xFF${GREEN:1}" \
-                icon.padding_left=15 \
-                label.padding_right=15 \
-                background.padding_left=20 \
-  background.color="0x96${CURRENT_LINE:1}"      \
-  background.corner_radius=4                    \
-  background.height=24
+sketchybar -m --add item title left                      \
+              --subscribe title yabai_window             \
+              --set title script="$SCRIPT"               \
+                label.color="0xFF${GREEN:1}"             \
+                icon.padding_left=15                     \
+                label.padding_right=15                   \
+                background.padding_left=20               \
+                background.color="0x96${CURRENT_LINE:1}" \
+                background.corner_radius=4               \
+                background.height=24
 
