@@ -47,11 +47,11 @@ sudo apt-get update
 - [ ] ( __Line: 2__) - Add Music if playing
 - [ ] ( __Line: 3__) - See if I can make the prompt a color script gradient changes on error
 
-## [nv_chad/highlights.lua](nv_chad/highlights.lua)
-- [ ] ( __Line: 10__) - Should add a check for Dracula before setting these 
-
 ## [nv_chad/init.lua](nv_chad/init.lua)
 - [ ] ( __Line: 36__) - Add Events to plugs to lazy load
+
+## [nv_chad/highlights.lua](nv_chad/highlights.lua)
+- [ ] ( __Line: 10__) - Should add a check for Dracula before setting these 
 
 ## [install.conf.yaml](install.conf.yaml)
 - [ ] ( __Line: 1__) - Install Pip, Go, Rust, Node, etc Packages
@@ -77,8 +77,12 @@ sudo apt-get update
 - [ ] ( __Line: 50__) - Install VSCode plugins 
 - [ ] ( __Line: 57__) - Setup If Needed - Maybe add script in `helper`
 
-## [i3/config](i3/config)
-- [ ] ( __Line: 1__) - Add Rofi
+## [kitty/kitty.conf](kitty/kitty.conf)
+- [ ] ( __Line: 1__) - Syntax Highlighting for .conf not using proper italics 
+- [ ] ( __Line: 10__) - Download VictorMono and Patch it myself to see if sylistic options work
+- [ ] ( __Line: 11__) - Create Symbol Map to use large VictorMono Icons and Mono as regular Font
+- [ ] ( __Line: 26__) - Maybe this can be set to xterm-kitty and changed when needed for ssh etc
+- [ ] ( __Line: 34__) - Setup Keyboard Shortcuts and Bindings
 
 ## [bin/helper](bin/helper)
 - [ ] ( __Line: 199__) - Add flag to set all spaces to same wallpaper
@@ -87,12 +91,8 @@ sudo apt-get update
 - [ ] ( __Line: 202__) - Bind key to show desktop
 - [ ] ( __Line: 251__) - This could be improved with imagemagick and hammerspoon 
 
-## [kitty/kitty.conf](kitty/kitty.conf)
-- [ ] ( __Line: 1__) - Syntax Highlighting for .conf not using proper italics 
-- [ ] ( __Line: 10__) - Download VictorMono and Patch it myself to see if sylistic options work
-- [ ] ( __Line: 11__) - Create Symbol Map to use large VictorMono Icons and Mono as regular Font
-- [ ] ( __Line: 26__) - Maybe this can be set to xterm-kitty and changed when needed for ssh etc
-- [ ] ( __Line: 34__) - Setup Keyboard Shortcuts and Bindings
+## [i3/config](i3/config)
+- [ ] ( __Line: 1__) - Add Rofi
 
 ## [notes/arch.md](notes/arch.md)
 - [ ] ( __Line: 1__) - Add to install.conf.yaml 
