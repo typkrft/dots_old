@@ -20,7 +20,7 @@
     default < cmd - tab [
       "firefox" : skhd -k "ctrl - tab"
       "iterm2" : skhd -k "shift + cmd - 0x1E"
-      "kitty" : skhd -k "shift + ctrl - tab"
+      "kitty" : skhd -k "ctrl - tab"
     ]
 
   # Cycle Tabs <- 0x21 = [

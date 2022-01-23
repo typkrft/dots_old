@@ -23,6 +23,8 @@
     sh ~/.config/sketchybar/battery
   # Date & Clock
     sh ~/.config/sketchybar/date_time
+  # Investments
+    # sh ~/.config/sketchybar/investments
 
 # U P D A T E  B A R
   sketchybar --update

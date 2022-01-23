@@ -77,3 +77,22 @@ ffmpeg -y -i <input_file> -filter_complex "fps=<frames_per_second>,scale=<scale>
 
 $ scale: echo -e "360\n 380\n 720\n 1080"
 $ colors: echo -e "32\n 256"
+
+% Networking
+# Check ports (Individul or range -)
+nc -zcw10 <IP_HOSTNAME> <PORTs>
+
+% pdf
+
+# Donwload Webpage as PDF 
+curl --request POST 'https://demo.gotenberg.dev/forms/chromium/convert/url' --form 'url="<URL>"' -o <PDF_NAME>.pdf
+
+% hdd
+
+# Copy two Drives - Boot into live env if host hdd source - eg /dev/hda 
+sudo dd bs=4M conv=sync,noerror status=progress if=<SOURCE> of=<DESTINATION> 
+
+% docker
+
+# Dump container Contents
+sudo docker export <CONTAINER_NAME> > <FILE_NAME>.tar
